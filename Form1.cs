@@ -33,15 +33,15 @@ namespace WindowsFormsApplication1
         {
             string lcoinState = leftCoinState.Text;
             /// now need to check these are either: a + bi, a, bi, sqrt(a), sqrt(b)i, sqrt(a) + sqrt(b)i
-            if (inputs.IsValid(lcoinState) == false)
+            if (Inputs.IsValid(lcoinState) == false)
             {
                 MessageBox.Show("Left coin state value must be of form a, bi, a+bi, sqrt(a), sqrt(b)i or sqrt(a) + sqrt(b)i, default value sqrt(0.5) used for simulation");
             }
 
-            Complex leftInitial = inputs.convert(lcoinState);
+            Complex leftInitial = Inputs.Convert(lcoinState);
               
             string rcoinState = rightCoinState.Text;
-            if (inputs.IsValid(rcoinState) == false)
+            if (Inputs.IsValid(rcoinState) == false)
             {
                 MessageBox.Show("Right coin state value must be of form a, bi, a+bi, sqrt(a), sqrt(b)i or sqrt(a) + sqrt(b)i, default value sqrt(0.5) used for simulation");
             }
@@ -49,14 +49,14 @@ namespace WindowsFormsApplication1
             /// check initial state is normalised. if not, just reassign to something that is for time being. eventually
             /// want to make it so only runs if user puts in valid initial condition, but need it to work for all such conditions first.
             
-            Complex rightInitial = inputs.convert(rcoinState);
+            Complex rightInitial = Inputs.Convert(rcoinState);
             if (qWalker.isNormalised(rightInitial,leftInitial) == false)
             {
                 MessageBox.Show("Initial state not normalised, modulus squared of the amplitudes did not equal one, default value sqrt(0.5) used for each coin state");
                 rightInitial = new Complex(0,Math.Sqrt(0.5));
                 leftInitial = new Complex(0, Math.Sqrt(0.5));
             }
-            double[] probabilities = qWalker.runWalk(rightInitial,leftInitial);
+            double[] probabilities = qWalker.runWalk(rightInitial,leftInitial).Results;
             chart1.Series.Clear(); 
             chart1.Series.Add("probabilities");
             for (int i = 0; i < 100; i++)

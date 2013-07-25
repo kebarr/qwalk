@@ -15,7 +15,7 @@ namespace QWalk
             return 0.99 < probability && probability < 1.01;
         }
 
-        public static double[] runWalk(Complex rightInitial, Complex leftInitial)
+        public static WalkResults runWalk(Complex rightInitial, Complex leftInitial)
         {
             var number = new Complex(1, 0);
             // hadamard coin operator entry
@@ -46,7 +46,9 @@ namespace QWalk
                 // probability at each position is the modulus squared of each coin state at that position
                 probabilities[i] = Complex.Abs(positions[i, 0]) * Complex.Abs(positions[i, 0]) + Complex.Abs(positions[i, 1]) * Complex.Abs(positions[i, 1]);
             }
-            return probabilities;
+              
+
+            return  new WalkResults {DateRun = DateTime.Now, Results = probabilities};
         }
 
     }

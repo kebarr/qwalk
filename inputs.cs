@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace QWalk
 {
-    class inputs
+    public class Inputs
     {
 
         //function to check form of user input
@@ -18,7 +18,7 @@ namespace QWalk
             return Regex.IsMatch(input, pattern, RegexOptions.Compiled);
         }
 
-        public static Complex convert(string input)
+        public static Complex Convert(string input)
         {
             // different possible regular expressions need different conversions this is eg 1 + 0i
             Complex value;
@@ -36,32 +36,32 @@ namespace QWalk
                 string imgString = matches[1].Value;
                 //Console.WriteLine(realString);
                 //Console.WriteLine(imgString);
-                double real = Convert.ToDouble(realString);
-                double img = Convert.ToDouble(imgString);
+                double real = System.Convert.ToDouble(realString);
+                double img = System.Convert.ToDouble(imgString);
                 value = new Complex(img, real);
             }
             else if (Regex.IsMatch(input, poss2))
             {
-                double real = Convert.ToDouble(input);
+                double real = System.Convert.ToDouble(input);
                 value = new Complex(0, real);
             }
             else if (Regex.IsMatch(input, poss3))
             {
                 string resultString = Regex.Match(input, @"\b[0-9]*\.*[0-9]+\b").Value;
-                double img = Convert.ToDouble(resultString);
+                double img = System.Convert.ToDouble(resultString);
                 value = new Complex(img, 0);
             }
             else if (Regex.IsMatch(input, poss4))
             {
                 string resultString = Regex.Match(input, @"\b[0-9]*\.*[0-9]+\b").Value;
-                double number = Convert.ToDouble(resultString);
+                double number = System.Convert.ToDouble(resultString);
                 number = Math.Sqrt(number);
                 value = new Complex(0, number);
             }
             else if (Regex.IsMatch(input, poss5))
             {
                 string resultString = Regex.Match(input, @"\b[0-9]*\.*[0-9]+\b").Value;
-                double number = Convert.ToDouble(resultString);
+                double number = System.Convert.ToDouble(resultString);
                 number = Math.Sqrt(number);
                 value = new Complex(number, 0);
             }

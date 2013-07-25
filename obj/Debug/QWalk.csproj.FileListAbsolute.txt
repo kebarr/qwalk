@@ -7,3 +7,12 @@ C:\Users\Katie\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\Wi
 C:\Users\Katie\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\QWalk.pdb
 C:\Users\Katie\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\QWalk.exe
 C:\Users\Katie\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\QWalk.pdb
+C:\Code\NWL\qwalk\bin\Debug\QWalk.exe.config
+C:\Code\NWL\qwalk\obj\Debug\QWalk.exe
+C:\Code\NWL\qwalk\obj\Debug\QWalk.pdb
+C:\Code\NWL\qwalk\bin\Debug\QWalk.exe
+C:\Code\NWL\qwalk\bin\Debug\QWalk.pdb
+C:\Code\NWL\qwalk\obj\Debug\QWalk.csprojResolveAssemblyReference.cache
+C:\Code\NWL\qwalk\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Code\NWL\qwalk\obj\Debug\QWalk.Properties.Resources.resources
+C:\Code\NWL\qwalk\obj\Debug\QWalk.csproj.GenerateResource.Cache
